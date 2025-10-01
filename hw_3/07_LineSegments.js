@@ -252,7 +252,7 @@ function findIntersection (lines) { //교점찾기
         updateText(textOverlay3, "Intersection Points 2 Point 1: (" + intersections[0][0].toFixed(2) + "," + intersections[0][1].toFixed(2) + ") Point 2: (" + intersections[1][0].toFixed(2) + "," + intersections[1][1].toFixed(2) + ")")
     }
     if (intersections.length == 1){
-        updateText(textOverlay3, "Intersection Points 2 Point 1: (" + intersections[0][0].toFixed(2) + "," + intersections[0][1].toFixed(2) + ")");
+        updateText(textOverlay3, "Intersection Points 1 Point 1: (" + intersections[0][0].toFixed(2) + "," + intersections[0][1].toFixed(2) + ")");
     }
     if (intersections.length == 0) {
         updateText(textOverlay3, "No intersection");
