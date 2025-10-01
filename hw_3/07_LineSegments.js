@@ -222,10 +222,10 @@ function findIntersection (lines) { //교점찾기
         let intersect_y1 = A * intersect_x1 + B;
         let intersect_y2 = A * intersect_x2 + B;
 
-        if (Math.min(lp_1[0],lp_2[0])<intersect_x1 && intersect_x1 < Math.max(lp_1[0],lp_2[0])&&Math.min(lp_1[1],lp_2[1])<intersect_y1 && intersect_y1 < Math.max(lp_1[0],lp_2[0])){
+        if (Math.min(lp_1[0],lp_2[0])<=intersect_x1 && intersect_x1 <= Math.max(lp_1[0],lp_2[0])&&Math.min(lp_1[1],lp_2[1])<=intersect_y1 && intersect_y1 <=Math.max(lp_1[1],lp_2[1])){
             intersections.push([intersect_x1,intersect_y1]);
         }
-        if (Math.min(lp_1[0],lp_2[0])<intersect_x2 && intersect_x2 < Math.max(lp_1[0],lp_2[0])&&Math.min(lp_1[1],lp_2[1])<intersect_y2 && intersect_y2 < Math.max(lp_1[0],lp_2[0])){
+        if (Math.min(lp_1[0],lp_2[0])<=intersect_x2 && intersect_x2 <= Math.max(lp_1[0],lp_2[0])&&Math.min(lp_1[1],lp_2[1])<=intersect_y2 && intersect_y2 <= Math.max(lp_1[1],lp_2[1])){
             intersections.push([intersect_x2,intersect_y2]);
         }
     }
@@ -285,7 +285,6 @@ function render() {
 
         // 임시 선 그리기
     if (isDrawing && startPoint && tempEndPoint) {
-        console.log(lines)
         if (lines.length == 0){
             shader.setVec4("u_color", [0.5, 0.5, 0.5, 1.0]); // 임시 선분의 color는 회색
             let tempPoint = [startPoint[0], startPoint[1],tempEndPoint[0], tempEndPoint[1]];
